@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { getLatestGames } from "../lib/metacritic";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { View, ActivityIndicator, FlatList } from "react-native";
-import { Logo } from "../components/Logo";
+import { View, ActivityIndicator, FlatList, Pressable } from "react-native";
 
 import { GameCard, AnimatedGameCard } from "./GameCard";
+
 // import Constants from "expo-constants";
+import { styled } from "nativewind";
+import { Screen } from "./Screen";
+
+//styled podemos usar el active <StyledPressable className={`active:opacity-30`}>
 
 export function Main() {
   const [dataGames, setDataGames] = useState([]);
@@ -24,11 +28,9 @@ export function Main() {
   // return <CardInfo dataGames={dataGames} />;
 
   return (
-    <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
-      <View style={{ marginBottom: 15 }}>
-        <Logo />
-      </View>
-
+    <Screen
+    // style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}
+    >
       {/* SafeAreaView Solo para IOS */}
       {/* <SafeAreaView style={{ marginVertical: 10 }}> */}
 
@@ -50,7 +52,7 @@ export function Main() {
         // </ScrollView>
       )}
       {/* </SafeAreaView> */}
-    </View>
+    </Screen>
   );
 
   // return (
