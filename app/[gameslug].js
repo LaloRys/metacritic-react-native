@@ -26,7 +26,7 @@ export default function Detail() {
           headerTitle: () => {
             if (gameInfo === null)
               return <ActivityIndicator color={"#ffff"} size={"small"} />;
-            return <Text className="text-lg">{gameInfo.title}</Text>;
+            return <Text className="font-bold">{gameInfo.title}</Text>;
           },
           headerLeft: () => {},
           headerRight: () => {},

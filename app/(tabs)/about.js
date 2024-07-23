@@ -1,8 +1,8 @@
 import { Link } from "expo-router";
 import React from "react";
 import { View, Text, ScrollView, Pressable } from "react-native";
-import { HomeIcon } from "../components/Icons";
-import { Screen } from "../components/Screen";
+import { HomeIcon } from "../../components/Icons";
+import { Screen } from "../../components/Screen";
 
 //Es importante que las rutas exporten por defecto
 export default function About() {
